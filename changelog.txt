@@ -22,7 +22,15 @@
 * @version    ##VERSION##, ##DATE##
 **************************************************************************************
 
-Planned for v1.8.1
+
+Planned for 1.8.2
+- Bugfix:   (MBaker)                            - Fix to getCell() method when cell reference includes a worksheet reference
+- Bugfix:   (ncrypthic)       Work Item GH-570  - Ignore inlineStr type if formula element exists
+- General:  (umpirsky)        Work Item GH-548  - Optimize vlookup() sort
+- Bugfix:   (MBaker)          Work Item GH-554  - Whitespace after toRichTextObject()
+
+
+2015-04-30 (v1.8.1):
 - Bugfix:   (goncons)         Work Item GH-397  - Fix for Writing an Open Document cell with non-numeric formula
 - Bugfix:   (sarciszewski)    Work Item GH-329  - Avoid potential divide by zero in basedrawing
 - Bugfix:   (ymaerschalck)    Work Item GH-405  - XML External Entity (XXE) Processing, different behaviour between simplexml_load_string() and simplexml_load_file().
@@ -52,9 +60,16 @@ Planned for v1.8.1
 - Feature:  (MBaker)                            - New methods added for testing cell status within merge groups
 - Feature:  (cifren/MBaker)   Work Item GH-205  - Handling merge cells in HTML Reader
 - Feature:  (MBaker)                            - Helper to convert basic HTML markup to a Rich Text object
+- Feature:  (MBaker)                            - Improved Iterators
+                                                    New Column Iterator
+                                                    Support for row and column ranges
+                                                    Improved handling for next/prev
+- Security: (MBaker)                            - XML filescan in XML-based Readers to prevent XML Entity Expansion (XEE)
+                                                    (see http://projects.webappsec.org/w/page/13247002/XML%20Entity%20Expansion for an explanation of XEE injection) attacks
+                                                  Reference CVE-2015-3542 - Identification of problem courtesy of Dawid Golunski (Pentest Ltd.)
 
 
-2014-03-02 (v1.8.0):
+                                                  2014-03-02 (v1.8.0):
 - Bugfix:   (MBaker)          Work item CP19830 - Undefined variable: fileHandle in CSV Reader
 - Bugfix:   (MBaker)          Work item CP19968 - Out of memory in style/supervisor.php
 - Bugfix:   (MBaker)                            - Style error with merged cells in PDF Writer
